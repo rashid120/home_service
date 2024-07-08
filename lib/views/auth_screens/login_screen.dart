@@ -2,6 +2,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:home_service/extensions/space.dart';
 import 'package:home_service/views/auth_screens/otp_verify_screen.dart';
+import 'package:home_service/views/auth_screens/register_screen.dart';
 import 'package:home_service/views/utils/app_size.dart';
 import 'package:home_service/views/utils/custom_widgets.dart';
 import 'package:home_service/views/utils/styles.dart';
@@ -52,7 +53,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-              customWidget.loginSignUpText(text: "Don't have account? ", onTapText: 'Sign Up', onPress: (){})
+              customWidget.loginSignUpText(text: "Don't have account? ", onTapText: 'Sign Up', onPress: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const RegisterScreen(),));
+              })
             ],
           ),
         ),

@@ -15,8 +15,8 @@ class CustomWidgets{
           child: Text(text, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),))
   );
 
-  Widget authTextField({required String hintText, Widget? preFixIcon, double leftPadding=20}) => Container(
-    height: 55,
+  Widget authTextField({required String hintText, Widget? preFixIcon, double leftPadding=20, Widget? suffixIcon, obscureText=false}) => Container(
+    height: 50,
     width: double.infinity,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(30),
@@ -26,10 +26,13 @@ class CustomWidgets{
       child: Padding(
         padding: EdgeInsets.only(left: leftPadding),
         child: TextField(
+          obscureText: obscureText,
           decoration: InputDecoration(
             hintText: hintText,
+            hintStyle: Styles().normalTextStyle(color: Colors.grey),
             border: InputBorder.none,
-            prefixIcon: preFixIcon
+            prefixIcon: preFixIcon,
+            suffixIcon: suffixIcon,
           ),
         ),
       ),
