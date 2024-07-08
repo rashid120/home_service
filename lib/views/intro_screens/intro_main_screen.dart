@@ -79,7 +79,7 @@ class _IntroScreenState extends State<IntroScreen> {
 
                     _currentIndex ==0 ? IntroContents().firstIntro(nextSlide: _nextSlide): const SizedBox(),
                     _currentIndex ==1 ? IntroContents().secondIntro(nextSlide: _nextSlide): const SizedBox(),
-                    _currentIndex ==2 ? IntroContents().thirdIntro(): const SizedBox(),
+                    _currentIndex ==2 ? IntroContents().thirdIntro(context: context): const SizedBox(),
                   ],
                 ),
               )
