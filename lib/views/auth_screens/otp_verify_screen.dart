@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_service/extensions/space.dart';
+import 'package:home_service/views/landing_screens/landing_screen.dart';
 import 'package:home_service/views/utils/custom_widgets.dart';
 import 'package:home_service/views/utils/styles.dart';
 
@@ -39,7 +40,7 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                 customWidget.loginSignUpText(text: "Didn't receive OTP? ",color: Colors.deepOrangeAccent, onTapText: ' Resend OTP', onPress: (){}),
                 30.0.verticalSpace,
                 customWidget.appButton(onPress: () {
-
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const LandingScreen(),));
                 }, text: 'Submit'),
                 20.0.verticalSpace
               ],
